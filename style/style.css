@@ -15,6 +15,7 @@
     --light-font : white;
     --lightBorder : white;
     transition: .3s ease-in-out;
+    border: 2px solid var(--lightBorder );
 }
 
 body{
@@ -22,7 +23,8 @@ body{
 }
 /* theme switch button */
 .switch{
-    position: absolute;
+
+    position: fixed;
     right: 10px;
     top: 10px;
     transition: .3s ease-in-out;
@@ -36,7 +38,7 @@ body{
     position: relative;
     background-color: var(--light-bg);
     color:var(--light-font);
-    /* border: 2px solid var(--lightBorder ); */
+    border: 2px solid var(--lightBorder );
     width: 95%;
     height: 250px;
     margin: 10px auto;
@@ -66,4 +68,19 @@ button{
     outline: none;
     font-size: 20px;
     padding: 5px;
+}
+
+/* responsible for mobile  */
+
+@media (max-width: 414px){
+   
+    .light-theme{
+        height: 400px;
+        padding: 10px 10px;
+    }
+
+    .switch{
+        position: fixed;
+        z-index: 100;
+    }
 }
